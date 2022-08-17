@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 import { navLink } from "../interface/interface";
@@ -14,10 +13,6 @@ const links: navLink[] = [
     href: "projects",
   },
   {
-    title: "Experience",
-    href: "experience",
-  },
-  {
     title: "Contact",
     href: "contact",
   },
@@ -25,20 +20,20 @@ const links: navLink[] = [
 
 const NavBar: React.FC = () => {
   return (
-    <div className="bg-dark-100 navbar">
+    <div className="navbar">
       <Container>
         <nav className="flex justify-between items-center py-2">
           <div className="text-7xl font-medium cursor-pointer text-gradient">
-            P.H
+            <a href="#">P.H</a>
           </div>
           <ul className="flex items-center gap-10">
             {links.map((link, id) => {
               return (
-                <Link key={id} href={link.href}>
-                  <li className="text-sm font-semibold uppercase cursor-pointer text-white">
+                <a key={id} href={`#${link.href}`}>
+                  <li className="text-base font-semibold uppercase cursor-pointer text-white hover:text-blue-400">
                     {link.title}
                   </li>
-                </Link>
+                </a>
               );
             })}
           </ul>

@@ -3,6 +3,9 @@ import React from "react";
 import { info } from "../interface/interface";
 import Container from "./Container";
 
+import { motion } from "framer-motion";
+import { leftToRight } from "./Greeting";
+
 const informations: info[] = [
   {
     title: "Học vấn",
@@ -32,17 +35,25 @@ const informations: info[] = [
 
 const About: React.FC = () => {
   return (
-    <div className="bg-dark-200">
+    <div className="bg-dark-200" id="about">
       <Container>
         <div className="py-20">
-          <div className="p-10 flex items-center justify-between gap-6 main-info">
-            <Image
-              width="300"
-              height="300"
-              src="/phuy-about.jpeg"
-              alt=""
-              className="object-cover "
-            />
+          <motion.div
+            className="p-10 flex items-center justify-between gap-6 main-info "
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            variants={leftToRight}
+          >
+            <div className="flex border-4 border-white">
+              <Image
+                width="300"
+                height="300"
+                src="/phuy-about.jpeg"
+                alt=""
+                className="object-cover"
+              />
+            </div>
 
             <div className="flex-1 text-white">
               <div className="pb-4 border-b border-gray-500">
@@ -66,7 +77,7 @@ const About: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>
