@@ -8,7 +8,7 @@ export interface info {
   content: string;
 }
 
-type languageType = {
+export type languageType = {
   name: string;
   icon: string;
 };

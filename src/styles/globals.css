@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -23,19 +22,32 @@ html {
   backdrop-filter: blur(20px);
 }
 
-.main-info {
-  --angle: 0deg;
-  border: 0.3rem solid;
-  border-image: linear-gradient(var(--angle), #00cc99, #eef0f5, #6600ff) 1;
-  animation: 5s rotate linear infinite;
+.text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #5a5bf3, #91e7d9);
+  text-shadow: 0 0 100px #5a5bf3;
+  animation: typing 10s steps(30) infinite, blink 1s infinite;
+  white-space: nowrap;
 }
-@keyframes rotate {
-  to {
-    --angle: 360deg;
+
+@keyframes typing {
+  0%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 50%;
   }
 }
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 10px solid transparent;
+  }
+  50% {
+    border-right: 10px solid #5a5bf3;
+  }
 }

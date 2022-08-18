@@ -4,7 +4,7 @@ export const projects: projectType[] = [
   {
     id: 1,
     img: "/chat-app.png",
-    link: "dsdda",
+    link: "https://chat-web-js.web.app/",
     title: "Realtime Chat Application",
     languages: [
       {
@@ -27,7 +27,7 @@ export const projects: projectType[] = [
     id: 2,
     img: "/crypto-search.png",
     title: "Crypto Search Website",
-    link: "sadsd",
+    link: "https://phuy-crypto-search.web.app/",
     languages: [
       {
         name: "React",
@@ -41,7 +41,7 @@ export const projects: projectType[] = [
     id: 3,
     img: "/hades-shop.png",
     title: "Hades shop",
-    link: "sasa",
+    link: "https://phuy-hades.web.app/",
     languages: [
       {
         name: "React",

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { contactType } from "../interface/interface";
 import Container from "./Container";
@@ -9,27 +10,27 @@ const contacts: contactType[] = [
   {
     id: 1,
     logo: "/github.svg",
-    link: "sasa",
+    link: "https://github.com/Phuy29",
   },
   {
     id: 2,
     logo: "/gmail.svg",
-    link: "dadas",
+    link: "mailto: phuchuy292003@gmail.com",
   },
   {
     id: 3,
     logo: "/facebook.svg",
-    link: "dds",
+    link: "https://www.facebook.com/profile.php?id=100009080740824",
   },
 ];
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-dark-200" id="contact">
+    <div className="bg-dark-200 px-8" id="contact">
       <Container>
         <div className="text-white py-10 text-center">
           <motion.h1
-            className="text-6xl font-bold"
+            className="text-4xl md:text-6xl font-bold"
             initial="offscreen"
             whileInView="onscreen"
             variants={leftToRight}
@@ -39,7 +40,7 @@ const Contact: React.FC = () => {
           </motion.h1>
 
           <motion.div
-            className="text-xl font-semibold my-6"
+            className="text-lg md:text-2xl font-semibold my-6"
             initial="offscreen"
             whileInView="onscreen"
             variants={rightToLeft}
@@ -58,13 +59,17 @@ const Contact: React.FC = () => {
             {contacts.map((contact) => {
               return (
                 <div key={contact.id} className="cursor-pointer">
-                  <Image
-                    width={35}
-                    height={35}
-                    src={contact.logo}
-                    alt=""
-                    className="text-gray-600"
-                  />
+                  <Link href={contact.link}>
+                    <a target="_blank">
+                      <Image
+                        width={35}
+                        height={35}
+                        src={contact.logo}
+                        alt=""
+                        className="text-gray-600"
+                      />
+                    </a>
+                  </Link>
                 </div>
               );
             })}
