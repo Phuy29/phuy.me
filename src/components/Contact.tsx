@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { contactType } from "../interface/interface";
 import Container from "./Container";
-import { leftToRight, rightToLeft } from "./Greeting";
+import { leftToRight } from "./Greeting";
 
 const contacts: contactType[] = [
   {
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             className="text-lg md:text-2xl font-semibold my-6"
             initial="offscreen"
             whileInView="onscreen"
-            variants={rightToLeft}
+            variants={leftToRight}
             viewport={{ once: true }}
           >
             Currently active looking for Frontend Developer Internship
