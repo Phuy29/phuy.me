@@ -28,9 +28,9 @@ const projectVariant: Variants = {
 const Projects: React.FC<projectsProps> = (props) => {
   const { projects } = props;
   return (
-    <div className="bg-dark-300 px-8" id="projects">
+    <div className="bg-gray-200 dark:bg-dark-300 px-8" id="projects">
       <Container>
-        <div className="py-10 text-white">
+        <div className="py-10 dark:text-white">
           <motion.div
             className="text-4xl md:text-6xl font-bold text-center mb-10"
             initial="offscreen"
@@ -84,7 +84,7 @@ const Project: React.FC<projectProps> = (props) => {
     <Link href={link}>
       <a target="_blank">
         <motion.div
-          className="mt-10 bg-dark-100 text-white h-[500px] flex flex-col justify-between cursor-pointer"
+          className="mt-10 bg-white dark:bg-dark-100 dark:text-white h-[500px] flex flex-col justify-between cursor-pointer shadow-lg"
           initial="offscreen"
           whileInView="onscreen"
           variants={projectVariant}
@@ -99,7 +99,7 @@ const Project: React.FC<projectProps> = (props) => {
                 return (
                   <div
                     key={id}
-                    className="flex items-center bg-white rounded-lg text-black p-1"
+                    className="flex items-center bg-gray-300 dark:bg-white rounded-lg text-black p-1"
                   >
                     <Image width={20} height={20} src={language.icon} alt="" />
                     <p className="ml-1">{language.name}</p>
@@ -109,7 +109,7 @@ const Project: React.FC<projectProps> = (props) => {
             </div>
             <div className="my-2">{description}</div>
           </div>
-          <div className="w-full py-2 text-center bg-slate-600">
+          <div className="w-full py-2 text-center bg-gray-200 dark:bg-slate-600">
             View in github
           </div>
         </motion.div>

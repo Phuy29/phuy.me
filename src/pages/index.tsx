@@ -12,9 +12,19 @@ import Greeting from "../components/Greeting";
 import NavBar from "../components/NavBar";
 import Projects from "../components/Projects";
 
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
+
 const Home: NextPage = ({
   projectsData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  const { setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme("dark");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <Head>
@@ -29,7 +39,7 @@ const Home: NextPage = ({
         <meta property="og:image" content="/phuy.png" />
         <link rel="icon" href="/phuy.png" />
       </Head>
-      <div className="bg-dark-100">
+      <div className="bg-gray-50 dark:bg-dark-100">
         <NavBar />
         <Greeting />
         <About />

@@ -26,9 +26,9 @@ const contacts: contactType[] = [
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-dark-200 px-8" id="contact">
+    <div className="dark:bg-dark-200 px-8" id="contact">
       <Container>
-        <div className="text-white py-10 text-center">
+        <div className="dark:text-white py-10 text-center">
           <motion.h1
             className="text-4xl md:text-6xl font-bold"
             initial="offscreen"
@@ -61,13 +61,7 @@ const Contact: React.FC = () => {
                 <div key={contact.id} className="cursor-pointer">
                   <Link href={contact.link}>
                     <a target="_blank">
-                      <Image
-                        width={35}
-                        height={35}
-                        src={contact.logo}
-                        alt=""
-                        className="text-gray-600"
-                      />
+                      <Image width={35} height={35} src={contact.logo} alt="" />
                     </a>
                   </Link>
                 </div>

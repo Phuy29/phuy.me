@@ -48,10 +48,10 @@ const Greeting: React.FC = () => {
             viewport={{ once: true }}
             variants={leftToRight}
           >
-            <h1 className="text-2xl md:text-[4.5rem] font-bold md:font-black text-white leading-tight">
+            <h1 className="text-2xl md:text-[4.5rem] font-bold md:font-black dark:text-white leading-tight">
               Xin chào, tôi là Phúc Huy
             </h1>
-            <p className="text-lg md:text-4xl font-normal md:font-medium pt-6 pb-8 text-white">
+            <p className="text-lg md:text-4xl font-normal md:font-medium pt-6 pb-8 dark:text-white">
               Tôi làm{" "}
               <span className="text-xl md:text-4xl text-gradient text">
                 Web Developer
@@ -61,7 +61,7 @@ const Greeting: React.FC = () => {
               <div className="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 p-1 rounded-xl cursor-pointer hover:opacity-60 duration-100">
                 <a
                   target="_blank"
-                  className="inline-block text-lg md:text-2xl font-semibold px-4 py-3 bg-dark-100 text-white rounded-lg"
+                  className="inline-block text-lg md:text-2xl font-semibold px-4 py-3 bg-white dark:bg-dark-100 dark:text-white rounded-lg"
                 >
                   <span>My resume</span>{" "}
                   <span className="text-gradient">{">"}</span>
