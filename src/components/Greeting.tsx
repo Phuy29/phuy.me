@@ -48,17 +48,18 @@ const Greeting: React.FC = () => {
             viewport={{ once: true }}
             variants={leftToRight}
           >
-            <h1 className="text-2xl md:text-[4.5rem] font-bold md:font-black dark:text-white leading-tight">
+            <h1 className="text-2xl md:text-[4.5rem] font-bold md:font-extrabold dark:text-white leading-tight">
               Xin chào, tôi là Phúc Huy
             </h1>
-            <p className="text-lg md:text-4xl font-normal md:font-medium pt-6 pb-8 dark:text-white">
-              Tôi làm{" "}
-              <span className="text-xl md:text-4xl text-gradient text">
+            <div className="font-normal md:font-medium dark:text-white my-4 flex items-center">
+              <span className="text-xl md:text-4xl">Tôi làm</span>
+              <span className="text-2xl md:text-5xl font-bold ml-2 inline-block max-w-[140px] md:max-w-[360px] text">
                 Web Developer
               </span>
-            </p>
+            </div>
+
             <Link href="">
-              <div className="inline-block bg-gradient-to-r from-sky-500 to-indigo-500 p-1 rounded-xl cursor-pointer hover:opacity-60 duration-100">
+              <div className="inline-block mt-5 bg-gradient-to-r from-sky-500 to-indigo-500 p-1 rounded-xl cursor-pointer hover:opacity-60 duration-100">
                 <a
                   target="_blank"
                   className="inline-block text-lg md:text-2xl font-semibold px-4 py-3 bg-white dark:bg-dark-100 dark:text-white rounded-lg"

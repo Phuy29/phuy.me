@@ -11,18 +11,31 @@ import Footer from "../components/Footer";
 import Greeting from "../components/Greeting";
 import NavBar from "../components/NavBar";
 import Projects from "../components/Projects";
+import { Link } from "react-scroll";
 
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Home: NextPage = ({
   projectsData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { setTheme } = useTheme();
+  const [scrollToTop, setScrollToTop] = useState(false);
 
   useEffect(() => {
     setTheme("dark");
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollY == 0 ? setScrollToTop(false) : setScrollToTop(true);
+    };
+    window.addEventListener("scroll", handleScrollToTop);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollToTop);
+    };
   }, []);
 
   return (
@@ -47,6 +60,28 @@ const Home: NextPage = ({
         <Contact />
         <Footer />
       </div>
+      {scrollToTop && (
+        <Link
+          className="fixed right-5 bottom-5 bg-gray-400 dark:bg-gray-600 p-3 hover:bg-blue-600 dark:hover:bg-blue-600 duration-300 rounded-md"
+          to="greeting"
+          duration={500}
+          spy={true}
+          smooth={true}
+          offset={-200}
+        >
+          <svg
+            stroke="currentColor"
+            fill="#fff"
+            strokeWidth="0"
+            viewBox="0 0 24 24"
+            height="1.3em"
+            width="1.3em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M5 15h14l-7-8z"></path>
+          </svg>
+        </Link>
+      )}
     </>
   );
 };

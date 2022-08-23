@@ -6,15 +6,6 @@ html {
   overflow-x: hidden;
 }
 
-.text-gradient {
-  display: inline-block;
-  font-weight: bold;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(to right, #5a5bf3, #91e7d9);
-}
-
 .navbar {
   position: sticky;
   z-index: 10;
@@ -22,13 +13,23 @@ html {
   backdrop-filter: blur(20px);
 }
 
+.text-gradient {
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, #5a5bf3, #91e7d9);
+}
+
 .text {
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(to right, #5a5bf3, #91e7d9);
   text-shadow: 0 0 100px #5a5bf3;
   animation: typing 10s steps(30) infinite, blink 1s infinite;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 @keyframes typing {
@@ -38,7 +39,7 @@ html {
   }
   70%,
   90% {
-    width: 50%;
+    width: 70%;
   }
 }
 

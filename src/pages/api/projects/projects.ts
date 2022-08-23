@@ -8,12 +8,8 @@ export const projects: projectType[] = [
     title: "Realtime Chat Application",
     languages: [
       {
-        name: "HTML",
-        icon: "/html.svg",
-      },
-      {
-        name: "CSS",
-        icon: "/css.svg",
+        name: "Javascript",
+        icon: "/javascript.svg",
       },
       {
         name: "Firebase",
