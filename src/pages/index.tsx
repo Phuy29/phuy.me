@@ -50,7 +50,8 @@ const Home: NextPage = ({
           content="Front-end developer, Web developer."
         />
         <meta property="og:image" content="/phuy.png" />
-        <link rel="icon" href="/phuy.png" />
+        <link rel="icon" href="/phuy_logo.png" />
+        <link rel="apple-touch-icon" href="/phuy_logo.png" />
       </Head>
       <div className="bg-gray-50 dark:bg-dark-100">
         <NavBar />
