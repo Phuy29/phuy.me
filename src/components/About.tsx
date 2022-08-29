@@ -25,7 +25,7 @@ const informations: info[] = [
   },
   {
     title: "Website",
-    content: "phuy.me",
+    content: "https://phuy.vercel.app",
   },
   {
     title: "Nghề nghiệp",
