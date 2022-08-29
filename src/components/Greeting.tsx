@@ -59,7 +59,7 @@ const Greeting: React.FC = () => {
             </div>
 
             <div className="inline-block mt-5 bg-gradient-to-r from-sky-500 to-indigo-500 p-1 rounded-xl cursor-pointer hover:opacity-60 duration-100">
-              <Link href="https://drive.google.com/file/d/1E2i6dAoy3dWD8G-MF0vLIfMkuG1vw6Os/view">
+              <Link href="https://drive.google.com/file/d/19oG-f6TAxA2zKYw8EwegfZI8EY5geMzW/view">
                 <a
                   target="_blank"
                   className="inline-block text-lg md:text-2xl font-semibold px-4 py-3 bg-white dark:bg-dark-100 dark:text-white rounded-lg"
