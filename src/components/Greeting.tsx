@@ -77,7 +77,13 @@ const Greeting: React.FC = () => {
             viewport={{ once: true }}
             className="flex"
           >
-            <Image width="510px" height="650px" src="/phuy.png" alt="" />
+            <Image
+              width="510px"
+              height="650px"
+              src="/phuy.png"
+              alt=""
+              priority={true}
+            />
           </motion.div>
         </div>
       </Container>

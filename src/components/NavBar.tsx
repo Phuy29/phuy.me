@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="sticky backdrop-blur-lg z-10 top-0 px-8 shadow-md">
       <Container>
-        <nav className="flex justify-between items-center py-5">
+        <nav className="flex justify-between items-center pt-2 pb-3">
           <div className="text-5xl md:text-7xl font-medium cursor-pointer text-gradient">
             <Link
               to="greeting"
