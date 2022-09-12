@@ -37,8 +37,16 @@ export const projects: projectType[] = [
     id: 3,
     img: "/hades-shop.png",
     title: "Hades shop",
-    link: "https://github.com/Phuy29/Hades-shop",
+    link: "https://github.com/Phuy29/hades-shop",
     languages: [
+      {
+        name: "Node.js",
+        icon: "/nodejs.svg",
+      },
+      {
+        name: "MongoDB",
+        icon: "/mongodb.svg",
+      },
       {
         name: "React",
         icon: "/react.svg",
@@ -49,6 +57,6 @@ export const projects: projectType[] = [
       },
     ],
     description:
-      "Hades shop is inspired by the website of the hades brand. Hades shop is e-commerce website, using React.js. ",
+      "Hades shop is inspired by the website of the hades brand. Hades shop is e-commerce website. ",
   },
 ];

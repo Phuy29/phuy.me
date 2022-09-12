@@ -94,7 +94,7 @@ const Project: React.FC<projectProps> = (props) => {
           <Image width={625} height={324} src={img} alt="" className="w-full" />
           <div className="p-4 flex-1">
             <h2 className="text-2xl font-medium my-2">{title}</h2>
-            <div className="flex gap-4 items-center py-2">
+            <div className="flex gap-2 items-center py-2 flex-wrap">
               {languages.map((language, id) => {
                 return (
                   <div
